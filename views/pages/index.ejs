@@ -1,0 +1,29 @@
+
+<html lang="en">
+    <head>
+      <head>
+         <% include ../partials/header.ejs %>
+      </head>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="header">
+                Header Parser Microservice
+            </h1>
+            <blockquote>
+                User stories:
+                <ul>1) I can get the IP address, language and operating system for my browser.</ul>
+            </blockquote>
+            <h3>Example usage:</h3>
+            <code>http://localhost:8000/parseHeader</code><br>
+            <h3>Example output:</h3>
+            <code>
+              {
+                "ipaddress": "181.49.66.142",
+                "language": "es-419",
+                "software": "Macintosh; Intel Mac OS X 10_10_5"
+              }
+            </code>
+        </div>
+    </body>
+</html>

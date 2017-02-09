@@ -1,0 +1,23 @@
+{
+  "name": "header_parser_microservice",
+  "version": "1.0.0",
+  "description": "Header parser microservice for free code camp ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neckron/header_parser_microservice.git"
+  },
+  "author": "neckron",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/neckron/header_parser_microservice/issues"
+  },
+  "homepage": "https://github.com/neckron/header_parser_microservice#readme",
+  "dependencies": {
+    "ejs": "^2.5.5",
+    "express": "^4.14.1"
+  }
+}
