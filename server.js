@@ -27,7 +27,6 @@ function processAgent(agent){
   return agent.substring(fi+1,ei);
 }
 
-var port = 8000;
-app.listen(port, function () {
-  console.log('Example app listening on port %s!',port);
+app.listen(process.env.PORT || 5000, function () {
+  console.log('Example app listening on port %s!',process.env.PORT);
 })
