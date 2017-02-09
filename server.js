@@ -10,16 +10,22 @@ app.get('/', function (req, res) {
 
 app.get('/parseHeader', function(req, res) {
   var json = JSON.stringify(req.headers);
-    console.log(json["user-agent"]);
-    //console.log(req.headers.user-agent);
-    //console.log(req.headers.accept-language);
-    /*res.send({
-        "ipaddress": "181.49.66.142",
-        "language": "es-419",
-        "software": "Macintosh; Intel Mac OS X 10_10_5"
-      });*/
-      res.send(req.headers);
+    res.send({
+        "ipaddress": req.headers['host'],
+        "language": processLanguage(req.headers['accept-language']),
+        "software": processAgent(req.headers['user-agent']),
+      });
 });
+
+function processLanguage(lang){
+  return lang.split(',')[0];
+}
+
+function processAgent(agent){
+  var fi =  agent.indexOf('(');
+  var ei =  agent.indexOf(')');
+  return agent.substring(fi+1,ei);
+}
 
 var port = 8000;
 app.listen(port, function () {
